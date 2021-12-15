@@ -1,12 +1,10 @@
 ## Problem Statement
 
-In the main method, read a String (which may have alphabets along with numeric digits) and print the number of vowel and consonants (any alphabet apart from vowel is a consonant) present in the given String.
-<br>**Note**: The output should be printed in the same format as mentioned in the sample output.
+In the main method, read a String and print all consonants characters (in lower case) in the sequence as they appear in the input value. Please note: The consonants are characters that are not vowels.
 
 ## Input
 
-    Welcome123
+    DATABase
    
 ## Output
-    Number of Vowels: 3
-    Number of Consonants: 4
+    dtbs
