@@ -1,12 +1,12 @@
 ## Problem Statement
 
-In the main method, read a String (which may have alphabets along with numeric digits) and print the number of vowel and consonants (any alphabet apart from vowel is a consonant) present in the given String.
-<br>**Note**: The output should be printed in the same format as mentioned in the sample output.
+In the main method, write code to read a String value using Scanner and print the smallest vowel. Assume all input values are in lower case.
+
+E.g If the input value is "matrix" then output will be a (since there are two vowels a and i where a is smaller as per ASCII sequence).
 
 ## Input
 
-    Welcome123
+    matrix
    
 ## Output
-    Number of Vowels: 3
-    Number of Consonants: 4
+    a
