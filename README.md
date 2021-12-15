@@ -1,4 +1,4 @@
-<h1>❤️ TCS Xplore Java Hands-on Solutions 2021-22❤️</h1> 
+<h1>❤️ TCS Xplore Java Hands-on Solutions 2021-22 ❤️</h1> 
 This repository contains solutions to the Java programming questions asked in the TCS Xplore Java Hands-on Solutions.
 
 ### Repository Structure 📂
