@@ -29,7 +29,6 @@ Main method mentioned above already has Scanner code to read values, create obje
 Consider below sample input and output:
 
 ## Input
-
     Hyadry
     FHW0602
     EyeDryness
