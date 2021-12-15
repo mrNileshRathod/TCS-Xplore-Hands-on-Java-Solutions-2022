@@ -1,12 +1,12 @@
 ## Problem Statement
 
-In the main method, read a String (which may have alphabets along with numeric digits) and print the number of vowel and consonants (any alphabet apart from vowel is a consonant) present in the given String.
-<br>**Note**: The output should be printed in the same format as mentioned in the sample output.
+In the main method, write code to read a numeric digit(without any alphabets or special characters) using Scanner and print it in the reverse sequence as they appear in the input.
+
+Consider below sample input and output:
 
 ## Input
 
-    Welcome123
+    12345
    
 ## Output
-    Number of Vowels: 3
-    Number of Consonants: 4
+    Reverse of the number is 54321
