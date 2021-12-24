@@ -1,48 +1,62 @@
 ## Problem Statement
 
-Create a Class Player with below attributes:
+Create a class Sim with below attributes:
 
-id - int<br>
-country - String<br>
-side - String<br>
-price - double<br>
+simId - int
+customerName - String
+balance - double
+ratePerSecond - double
+circle - String
 
 Write getters, setters and parameterized constructor as required. 
 
-Create class Solution with main method. 
+Public class Solution is already created with main method.
+Code inside main method should not be altered else your solution might be scored as zero.
+You may copy the code from main method in eclipse to verify your implementation. 
 
-Implement static method - searchPlayerForMatch in Solution class.
+Implement static method - transferCustomerCircle in Solution class.
 
-This method will take a String parameter along with the other parameter as array of Player objects. 
-The method will return array of Player where the String parameter appears in the side attribute (with case insensitive search).
+This method will take first parameter as array of Sim class objects, second parameter as circle to be transferred (which is String parameter circle1) and third parameter as new circle (which is String parameter circle2).
 
-This method should be called from main method and display the id of returned objects in ascending order. 
+Method will transfer the customer to new circle (circle2), where the circle attribute would match second parameter (circle1). Method will return array of Sim objects for which circle is transferred. Return array should be sorted in descending order of ratePerSecond (assuming ratePerSecond is not same for any of the Sim objects).
 
-Before calling this method(searchPlayerForMatch) in the main method, use Scanner object to read values for four Player objects referring the attributes in the above sequence. 
-then, read the value for search parameter. 
-Next call the method searchPlayerForMatch, write the logic to sort the id in ascending order (in main method) and display the result. 
+
+This method should be called from main method and display the simId,customerName,circle and ratePerSecond of returned objects (as per sample output).
+
+Main method mentioned above already has Scanner code to read values, create objects and test above methods. Hence do not modify it.
 
 Consider below sample input and output:
 
 ## Input
     1
-    India
-    Batting
-    2500000
+    raj
+    100
+    1.5
+    KOL
     2
-    Australia
-    Batting
-    1000000
+    chetan
+    200
+    1.6
+    AHD
     3
-    Srilanka
-    Bowling
-    1700000
+    asha
+    150
+    1.7
+    MUM
     4
-    England
-    Bowling
-    2000000
-    Batting
+    kiran
+    50
+    2.2
+    AHD
+    5
+    vijay
+    130
+    1.8
+    AHD
+    AHD
+    KOL
    
 ## Output
-    1
-    2
+    4 kiran KOL 2.2
+    5 vijay KOL 1.8
+    2 chetan KOL 1.6
