@@ -1,48 +1,51 @@
 ## Problem Statement
 
-Create a Class Player with below attributes:
+Create a Class Inventory with below attributes:
 
-id - int<br>
-country - String<br>
-side - String<br>
-price - double<br>
+inventoryId - String
+maximumQuantity - int
+currentQuantity - int
+threshold - int
 
 Write getters, setters and parameterized constructor as required. 
 
 Create class Solution with main method. 
 
-Implement static method - searchPlayerForMatch in Solution class.
+Implement static method - replenish in Solution class.
 
-This method will take a String parameter along with the other parameter as array of Player objects. 
-The method will return array of Player where the String parameter appears in the side attribute (with case insensitive search).
+This method will take an int parameter named limit along with the other parameter as array of Inventory objects. 
+The method will return array of Inventory where the threshold attribute is less than or equal to the int parameter passed.
 
-This method should be called from main method and display the id of returned objects in ascending order. 
+This method should be called from main method and display the id of returned objects along with Filling status.
 
-Before calling this method(searchPlayerForMatch) in the main method, use Scanner object to read values for four Player objects referring the attributes in the above sequence. 
-then, read the value for search parameter. 
-Next call the method searchPlayerForMatch, write the logic to sort the id in ascending order (in main method) and display the result. 
+if the threshold is greater than or equal to 75 then it should print "Critical Filling" as Filling Status. If the threshold is between 74 to 50 then Filling status should be "Moderate Filling", else should be "Non-Critical Filling" .
+
+Before calling this method(replenish) in the main method, use Scanner object to read values for four Inventory objects referring the attributes in the above sequence. 
+then, read the value for limit parameter. 
+Next call the method replenish and display the result. 
 
 Consider below sample input and output:
 
 ## Input
     1
-    India
-    Batting
-    2500000
+    100
+    50
+    40
     2
-    Australia
-    Batting
-    1000000
+    100
+    50
+    50
     3
-    Srilanka
-    Bowling
-    1700000
+    100
+    40
+    45
     4
-    England
-    Bowling
-    2000000
-    Batting
-   
+    100
+    80
+    25
+    45
+
 ## Output
-    1
-    2
+    1 Non-Critical Filling
+    3 Non-Critical Filling
+    4 Non-Critical Filling
