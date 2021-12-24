@@ -1,48 +1,80 @@
 ## Problem Statement
 
-Create a Class Player with below attributes:
+Create a class Bill with below attributes:
 
-id - int<br>
-country - String<br>
-side - String<br>
-price - double<br>
+billNo- int
+name - String
+typeOfConnection - String
+billAmount - double
+status – boolean
 
-Write getters, setters and parameterized constructor as required. 
+where billNo is the bill number, name is the name of the customer, typeOfConnection is the type of the connection (prepaid, postpaid), billAmount is the bill amount and status is whether the bill is paid or not (if paid then value is TRUE else value is FALSE). 
 
-Create class Solution with main method. 
+The above attributes should be private, write getters, setters and parameterized constructor as required. 
 
-Implement static method - searchPlayerForMatch in Solution class.
+Create class Solution with main method.
+Implement two static methods - findBillWithMaxBillAmountBasedOnStatus and getCountWithTypeOfConnection in Solution class.
+findBillWithMaxBillAmountBasedOnStatus method:
 
-This method will take a String parameter along with the other parameter as array of Player objects. 
-The method will return array of Player where the String parameter appears in the side attribute (with case insensitive search).
+This method will take an array of Bill objects and a boolean parameter as parameters. 
 
-This method should be called from main method and display the id of returned objects in ascending order. 
+The method will return bill object array in ascending order of their bill number from the array of Bill objects whose bill Amount is maximum in the array with the status attribute that matches with the input parameter.
 
-Before calling this method(searchPlayerForMatch) in the main method, use Scanner object to read values for four Player objects referring the attributes in the above sequence. 
-then, read the value for search parameter. 
-Next call the method searchPlayerForMatch, write the logic to sort the id in ascending order (in main method) and display the result. 
+If no Bill with the given status is present in the array of Bill objects, then the method should return null.
+
+getCountWithTypeOfConnection method:
+This method will take two input parameters - array of Bill objects and string parameter ( for type of connection).
+The method will return the count of bills from array of bill objects for the given type of connection.
+If no bill with the given type of connection is present in the array of bill objects, then the method should return 0.
+
+
+Note :
+
+Two bill object can have the same bill amount.
+All the searches should be case insensitive. 
+
+The above mentioned static methods should be called from the main method.
+
+For findBillWithMaxBillAmountBasedOnStatus method - The main method should print the billNo followed by # and name from the returned Bill object array if the returned value is not null.
+
+If the returned value is null then it should print "There are no bill with the given status".
+
+
+For getCountWithTypeOfConnection method - The main method should print the count of bills as it is, if the returned value is greater than 0,  otherwise it should print "There are no bills with given type of connection".
+
+
+Before calling these static methods in main, use Scanner to read the number of object and objects to read the values of Bill objects referring attributes in the above mentioned attribute sequence. 
+
+Next, read the value for status and typeOfConnection.
+
 
 Consider below sample input and output:
 
 ## Input
-    1
-    India
-    Batting
-    2500000
-    2
-    Australia
-    Batting
-    1000000
-    3
-    Srilanka
-    Bowling
-    1700000
     4
-    England
-    Bowling
-    2000000
-    Batting
+    111
+    Aman Mittal
+    Prepaid
+    914.25
+    true
+    222
+    Rekha Kumar
+    Prepaid
+    1425.75
+    false
+    333
+    Samyra Gupta
+    Prepaid
+    1305.00
+    true
+    444
+    Mohit Saxena
+    Postpaid
+    1300.50
+    false
+    false
+    Prepaid
    
 ## Output
-    1
-    2
+    222#Rekha Kumar
+    3
